@@ -236,13 +236,17 @@
 
 .banner-top-div-button button {
     background-color: #571CE0;
+    border: 1px solid #571CE0;
     color: white;
-    border: none;
     padding: 12px 24px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     border-radius: 2rem;
+}
+
+.banner-top-div-button button:hover {
+    background-color: #341185;
 }
 
 .banner-middle-div {
@@ -251,7 +255,6 @@
     gap: 30px;
     padding: 2rem;
     margin: -50px 4rem -50px 4rem;
-    
     background-color: #0D102F;
     border-radius: 15px;
     position: relative;
