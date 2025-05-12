@@ -1,0 +1,153 @@
+.footer-div {
+    background-image: url('https://bdbetsolution.com/assets/images/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; 
+}
+
+.footer-top-div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.footer-top-logo-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-top-logo-div img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-top-logo-div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-top-logo-div ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+    font-size:18px;
+}
+
+.footer-top-logo-div ul li:hover{
+    color: #4c94ff;
+    cursor: pointer;
+}
+
+.footer-top-logo-div ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FFFFFF;
+}
+
+.footer-top-list-div {
+    display: flex;
+    gap: 150px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+    font-size:18px;
+}
+
+.list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FFFFFF;
+}
+
+.list li:hover{
+    color: #4c94ff;
+    cursor: pointer;
+}
+
+.footer-bottom-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    width: 100%;
+    padding-top: 2rem;
+    border-top: 2px solid rgb(75, 68, 122);
+}
+
+.copy-dib p {
+    margin: 0;
+}
+
+.copy-dib span {
+    color: #41CD7D;
+}
+
+.footer-bottom-div .social-div {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom-div .social-div img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer-top-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-top-list-div {
+        display: none;
+    }
+    .footer-top-logo-div{
+        align-items: center;
+    }
+    .footer-top-logo-div ul{
+        text-align: center;
+    }
+    .footer-top-logo-div ul li{
+        font-size: 1rem;
+        color: #ffffffd1;
+    }
+    .footer-top-logo-div ul li::before{
+        display: none;
+    }
+
+    .footer-bottom-div{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+   .footer-bottom-div .copy-dib{
+        margin-top: 1rem;
+    }
+    .footer-bottom-div .social-div img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+}
