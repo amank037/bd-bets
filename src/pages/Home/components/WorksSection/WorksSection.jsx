@@ -3,8 +3,8 @@ import './WorksSection.css'
 
 const WorksSection = () => {
   const [activeImage, setActiveImage] = useState(0)
-  const [dragStart, setDragStart] = useState(0);
-  const [dragging, setDragging] = useState(false);
+  const [dragStart, setDragStart] = useState(0)
+  const [dragging, setDragging] = useState(false)
 
 
   const images = [
@@ -80,7 +80,7 @@ const WorksSection = () => {
   useEffect(() => {
     if (currentIndex === slides.length) {
       const timeout = setTimeout(() => {
-        setIsTransitioning(false);
+        setIsTransitioning(false)
         setCurrentIndex(0)
       }, 500)
   
@@ -89,56 +89,56 @@ const WorksSection = () => {
   }, [currentIndex, slides.length])
 
 const handleMouseDown = (e) => {
-  setDragging(true);
-  setDragStart(e.pageX - (currentIndex * (393 + 20)));
+  setDragging(true)
+  setDragStart(e.pageX - (currentIndex * (393 + 20)))
 };
 
 const handleMouseMove = (e) => {
   if (!dragging) return;
   
-  const currentPosition = e.pageX - dragStart;
-  const isMobile = window.innerWidth <= 600;
-  const slidesToShow = isMobile ? 2 : 3;
-  const maxScroll = (slides.length - slidesToShow) * (isMobile ? ((window.innerWidth - 30) / 2) : (393 + 20));
+  const currentPosition = e.pageX - dragStart
+  const isMobile = window.innerWidth <= 600
+  const slidesToShow = isMobile ? 2 : 3
+  const maxScroll = (slides.length - slidesToShow) * (isMobile ? ((window.innerWidth - 30) / 2) : (393 + 20))
   
 
-  const boundedPosition = Math.max(Math.min(currentPosition, 0), -maxScroll);
-  setCurrentIndex(-boundedPosition / (isMobile ? ((window.innerWidth - 30) / 2) : (393 + 20)));
-};
+  const boundedPosition = Math.max(Math.min(currentPosition, 0), -maxScroll)
+  setCurrentIndex(-boundedPosition / (isMobile ? ((window.innerWidth - 30) / 2) : (393 + 20)))
+}
 
 const handleMouseUp = () => {
-  if (!dragging) return;
+  if (!dragging) return
   
-  setDragging(false);
-  // Snap to nearest slide
-  const nearestSlide = Math.round(currentIndex);
-  const isMobile = window.innerWidth <= 600;
-  const slidesToShow = isMobile ? 2 : 3;
-  setCurrentIndex(Math.max(0, Math.min(nearestSlide, slides.length - slidesToShow)));
-};
+  setDragging(false)
+
+  const nearestSlide = Math.round(currentIndex)
+  const isMobile = window.innerWidth <= 600
+  const slidesToShow = isMobile ? 2 : 3
+  setCurrentIndex(Math.max(0, Math.min(nearestSlide, slides.length - slidesToShow)))
+}
 
 const handlePrevSlide = () => {
-  setIsTransitioning(true);
+  setIsTransitioning(true)
   setCurrentIndex((prev) => {
     if (prev <= 0) {
-      // If at the beginning, jump to last slide of first set
-      return slides.length - 1;
+
+      return slides.length - 1
     }
-    return prev - 1;
+    return prev - 1
   });
 };
 
 const handleNextSlide = () => {
-  setIsTransitioning(true);
+  setIsTransitioning(true)
   setCurrentIndex((prev) => {
-    const isMobile = window.innerWidth <= 600;
-    const slidesToShow = isMobile ? 2 : 3;
+    const isMobile = window.innerWidth <= 600
+    const slidesToShow = isMobile ? 2 : 3
     if (prev + 1 >= slides.length - slidesToShow + 1) {
-      return prev;
+      return prev
     }
-    return prev + 1;
-  });
-};
+    return prev + 1
+  })
+}
   
 
   return (

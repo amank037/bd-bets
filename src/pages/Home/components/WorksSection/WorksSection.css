@@ -99,8 +99,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 60px);  /* Account for padding */
-    height: calc(100% - 60px); /* Account for padding */
+    width: calc(100% - 60px); 
+    height: calc(100% - 60px); 
     object-fit: contain;
     border-radius: 10px;
     opacity: 0;

@@ -1,8 +1,8 @@
 .banner-bg-slider {
     position: absolute;
-    top: -50px; /* Move up slightly */
+    top: -50px;
     left: 0;
-    width: 95%; /* Reduce width slightly */
+    width: 95%;
     height: 100%;
     z-index: 1;
     overflow: hidden;
@@ -405,7 +405,7 @@
     }
 
     .banner-bottom-container {
-        order: -1; /* Moves text to top */
+        order: -1;
     }
 
     .banner-bottom-text h5 {
