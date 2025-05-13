@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import './FeaturesSection.css'
 
 const FeaturesSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
@@ -126,7 +126,7 @@ return (
       </div>
 
     </div>
-  );
-};
+  )
+}
 
-export default FeaturesSection;
+export default FeaturesSection

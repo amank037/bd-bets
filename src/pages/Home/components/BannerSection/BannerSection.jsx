@@ -3,7 +3,7 @@ import './BannerSection.css'
 import { useTranslation } from 'react-i18next'
 
 const BannerSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <div className='banner-div'>

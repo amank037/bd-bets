@@ -9,7 +9,7 @@ const WorksSection = () => {
   const [dragStart, setDragStart] = useState(0)
   const [dragging, setDragging] = useState(false)
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
 
   const images = [
@@ -97,10 +97,10 @@ const WorksSection = () => {
 const handleMouseDown = (e) => {
   setDragging(true)
   setDragStart(e.pageX - (currentIndex * (393 + 20)))
-};
+}
 
 const handleMouseMove = (e) => {
-  if (!dragging) return;
+  if (!dragging) return
   
   const currentPosition = e.pageX - dragStart
   const isMobile = window.innerWidth <= 600
@@ -131,8 +131,8 @@ const handlePrevSlide = () => {
       return slides.length - 1
     }
     return prev - 1
-  });
-};
+  })
+}
 
 const handleNextSlide = () => {
   setIsTransitioning(true)
@@ -234,7 +234,7 @@ const handleNextSlide = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WorksSection;
+export default WorksSection
