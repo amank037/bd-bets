@@ -11,3 +11,8 @@ body {
   color: #333;
 }
 
+body.lang-bn {
+  font-family: 'Noto Sans Bengali', 'Nunito Sans', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.7;
+}

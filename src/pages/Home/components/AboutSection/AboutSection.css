@@ -263,3 +263,90 @@
         font-size: 1rem;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+  .about-top-div {
+      padding: 30px 0;
+  }
+
+  .about-top-div::before {
+      height: 100%;
+  }
+
+  .faq-title {
+      margin-bottom: 30px;
+      padding: 0 1rem;
+  }
+
+  .faq-title h5 {
+      font-size: 1.2rem;
+  }
+
+  .faq-title h1 {
+      font-size: 1.8rem;
+  }
+
+  .accordion-container {
+      margin: 0 1rem;
+      padding: 30px 1rem;
+  }
+
+  .accordion-title {
+      padding: 15px;
+      gap: 10px;
+  }
+
+  .accordion-title img {
+      width: 25px;
+      height: 25px;
+  }
+
+  .accordion-title h3 {
+      font-size: 1rem;
+  }
+
+  .accordion-title p {
+      font-size: 2rem;
+      height: 30px;
+      width: 30px;
+  }
+
+  .accordion-desc p {
+      font-size: 0.9rem;
+      padding: 15px;
+  }
+
+  .about-bottom-div {
+      flex-direction: column-reverse;
+      padding: 30px 1rem;
+      gap: 30px;
+  }
+
+  .about-bottom-img {
+      width: 100%;
+  }
+
+  .about-bottom-text {
+      width: 100%;
+      gap: 20px;
+      text-align: center;
+  }
+
+  .about-bottom-text h1 {
+      font-size: 1.8rem;
+  }
+
+  .about-bottom-text p {
+      font-size: 1rem;
+  }
+
+  .about-bottom-text-btn {
+      margin: 0 auto;
+  }
+
+  .about-bottom-text-btn button {
+      padding: 12px 25px;
+      font-size: 1rem;
+  }
+}

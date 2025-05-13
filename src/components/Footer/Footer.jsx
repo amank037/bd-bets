@@ -1,7 +1,10 @@
 import React from 'react'
 import './Footer.css'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className='footer-div'>
 
@@ -11,29 +14,29 @@ const Footer = () => {
                 <img src="https://bdbetsolution.com/admin/images/bg/20240930160324-4931.svg?v=0.01" alt="LOGO" />
 
                 <ul>
-                    <li>About Us</li>
-                    <li>Payment Solutions</li>
-                    <li>Contact Us</li>
+                    <li>{t('About Us')}</li>
+                    <li>{t('Payment Solutions')}</li>
+                    <li>{t('Contact Us')}</li>
                 </ul>
             </div>
 
             <div className='footer-top-list-div'>
                 <ul className='list'>
-                    <li>MostPlay White Label</li>
-                    <li>Baji White Label</li>
-                    <li>Velki White Label</li>
-                    <li>Krikya22 White Label</li>
-                    <li>Sportsbet White Label</li>
-                    <li>Elon-Bet White Label</li>            
+                    <li>{t('MostPlay White Label')}</li>
+                    <li>{t('Baji White Label')}</li>
+                    <li>{t('Velki White Label')}</li>
+                    <li>{t('Krikya22 White Label')}</li>
+                    <li>{t('Sportsbet White Label')}</li>
+                    <li>{t('Elon-Bet White Label')}</li>            
                 </ul>
 
                 <ul className='list'>
-                    <li>Betjili White Label</li>
-                    <li>Jita White Label</li>
-                    <li>Takabet11 White Label</li>
-                    <li>Jeetwin White Label</li>
-                    <li>SkyExch White Label</li>
-                    <li>7Wicket White Label</li>            
+                    <li>{t('Betjili White Label')}</li>
+                    <li>{t('Jita White Label')}</li>
+                    <li>{t('Takabet11 White Label')}</li>
+                    <li>{t('Jeetwin White Label')}</li>
+                    <li>{t('SkyExch White Label')}</li>
+                    <li>{t('7Wicket White Label')}</li>            
                 </ul>
 
             </div>
@@ -43,7 +46,7 @@ const Footer = () => {
         <div className='footer-bottom-div'>
 
             <div className='copy-dib'>
-                <p> Copyright ©2024 <span>Bdbets</span> All Rights Reserve</p>
+                <p>{t('Copyright')} ©2024 <span>Bdbets</span> {t('All Rights Reserve')}</p>
             </div>
 
             <div className='social-div'>

@@ -331,3 +331,102 @@
         right: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+  .features-top-div {
+      background-image: none;
+      width: 100%;
+      padding: 2rem 0;
+  }
+
+  .features-top-nested-div {
+      width: 100%;
+      padding: 0 1rem;
+  }
+
+  .features-top-text {
+      width: 100%;
+      margin: 20px 0;
+  }
+
+  .features-top-text p {
+      width: 100%;
+  }
+
+  .features-top-carousel {
+      width: 100%;
+      padding: 0 20px;
+  }
+
+  .features-top-carousel button {
+      display: none;
+  }
+
+  .carousel-slider .features-slide {
+      min-width: 250px;
+      width: 300px;
+      height:auto;
+  }
+
+  .carousel-slider .features-slide .slide-nest {
+      padding: 10px;
+  }
+
+  .carousel-slider .features-slide img {
+      width: 200px;
+      height: 200px;
+  }
+
+  .carousel-slider .features-slide p {
+      font-size: 1rem;
+  }
+
+  .features-bottom-div {
+      padding: 2rem 0;
+  }
+
+  .features-bottom-div img {
+      display: none;
+  }
+
+  .features-bottom-nested {
+      width: 100%;
+      padding: 0 1rem;
+  }
+
+  .features-bottom-left {
+      display: none;
+  }
+
+  .features-bottom-right {
+      width: 100%;
+  }
+
+  .bottom-right-text {
+      padding: 0;
+  }
+
+  .bottom-right-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+
+  .grid-item {
+      width: 100%;
+      padding: 1.5rem;
+  }
+
+  .grid-item img {
+    display:block;
+      width: 200px;
+      height: 200px;
+  }
+
+  .carousel-left-btn {
+      left: 0;
+  }
+
+  .carousel-right-btn {
+      right: 0;
+  }
+}

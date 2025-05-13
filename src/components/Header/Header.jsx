@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
+import { useTranslation } from 'react-i18next'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,29 +23,31 @@ const Header = () => {
 
   const navItems = (
     <>
-      <a href="">Home</a>
-      <a href="">About Us</a>
-      <a href="">B2C</a>
+      <a href="/">{t('Home')}</a>
+      <a href="">{t('About Us')}</a>
+      <a href="">{t('B2C')}</a>
       
       <div className={`solutions-dropdown ${isSolutionsOpen ? 'active' : ''}`}>
         <a href="#" onClick={(e) => {
           e.preventDefault()
           setIsSolutionsOpen(!isSolutionsOpen)
         }}>
-          Solutions
+          {t('Solutions')}
         </a>
         <ul className="dropdown-content">
-          <li><a href="">White Label Solutions</a></li>
-          <li><a href="">Payment Solutions</a></li>
-          <li><a href="">Casino Aggregator</a></li>
+          <li><a href="">{t('White Label Solutions')}</a></li>
+          <li><a href="">{t('Payment Solutions')}</a></li>
+          <li><a href="">{t('Casino Aggregator')}</a></li>
         </ul>
       </div>
 
-      <a href="">Our Blogs</a>
-      <a href="">Career</a>
-      <a href="">Contact</a>
+      <a href="">{t('Our Blogs')}</a>
+      <a href="">{t('Career')}</a>
+      <a href="">{t('Contact')}</a>
     </>
   )
+
+  const currentLang = i18n.language === 'bn' ? t('Bengali') : t('English');
 
   return (
     <div className='header-div'>
@@ -64,9 +68,10 @@ const Header = () => {
           <div className='topbar-child-right-div'>
             <div className='language-div'>
               <img src="https://img.icons8.com/?size=30&id=63496&format=png&color=FFFFFF" alt="language" />
+              <span>{currentLang}</span>
               <ul>
-                <li>English</li>
-                <li>Bengali</li>
+                <li onClick={() => i18n.changeLanguage('en')}>English</li>
+                <li onClick={() => i18n.changeLanguage('bn')}>বাংলা</li>
               </ul>
             </div>
 
@@ -86,8 +91,7 @@ const Header = () => {
           <img src="https://bdbetsolution.com/admin/images/bg/20240930160324-4931.svg?v=0.01" alt="LOGO" />
         </div>
 
-        <button 
-          className={`mobile-menu-btn ${isMobileMenuOpen ? 'active' : ''}`}
+        <button className={`mobile-menu-btn ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <span></span>
